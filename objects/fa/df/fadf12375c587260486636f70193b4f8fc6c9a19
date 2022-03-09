@@ -1,0 +1,3 @@
+#---------------Remove Garden Cloche---------------
+craftingTable.removeRecipe(<item:immersiveengineering:cloche>);
+mods.jei.JEI.hideItem(<item:immersiveengineering:cloche>);

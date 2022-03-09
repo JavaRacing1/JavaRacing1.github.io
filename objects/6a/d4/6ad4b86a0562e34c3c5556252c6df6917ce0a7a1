@@ -1,0 +1,9 @@
+[
+    {
+      "dimension": "minecraft:overworld",
+      "mob": "iceandfire:myrmex_queen",
+      "result": "deny",
+      "onjoin": true
+    }
+]
+  

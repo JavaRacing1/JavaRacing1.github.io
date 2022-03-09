@@ -1,0 +1,111 @@
+import mods.mysticalagriculture.InfusionCrafting;
+import crafttweaker.api.item.IIngredient;
+
+#---------------Hiding unused crops and essences from JEI---------------
+mods.jei.JEI.hideItem(<item:mysticalagriculture:iridium_seeds>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:iridium_essence>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:chrome_seeds>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:chrome_essence>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:titanium_seeds>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:titanium_essence>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:tungsten_seeds>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:tungsten_essence>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:mithril_seeds>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:mithril_essence>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:graphite_seeds>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:graphite_essence>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:brass_seeds>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:brass_essence>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:silicon_seeds>);
+mods.jei.JEI.hideItem(<item:mysticalagriculture:silicon_essence>);
+
+#---------------Add recipe for Dry Rubber---------------
+var prudentium = <item:mysticalagriculture:prudentium_essence>;
+var dry_rubber = <item:industrialforegoing:dryrubber>;
+var rubber_essence = <item:mysticalagriculture:rubber_essence>;
+
+
+InfusionCrafting.addRecipe("ct_rubber_seeds", <item:mysticalagriculture:rubber_seeds>, [<item:mysticalagriculture:prosperity_seed_base>, dry_rubber, prudentium, dry_rubber, prudentium, dry_rubber, prudentium, dry_rubber, prudentium]);
+craftingTable.addShapeless("ct_rubber_from_essence", <item:industrialforegoing:tinydryrubber>*4, [rubber_essence, rubber_essence, rubber_essence, rubber_essence]);
+
+#---------------Essences---------------
+craftingTable.removeByName("mysticalagriculture:tertium_essence");
+craftingTable.removeByName("mysticalagriculture:imperium_essence");
+craftingTable.removeByName("mysticalagriculture:supremium_essence");
+craftingTable.removeByName("mysticalagradditions:insanium_essence");
+
+mods.extendedcrafting.TableCrafting.addShaped("ct_tertium", 2, <item:mysticalagriculture:tertium_essence>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:infusion_crystal>.anyDamage().transformDamage(), <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+mods.extendedcrafting.TableCrafting.addShaped("ctm_tertium", 2, <item:mysticalagriculture:tertium_essence>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:master_infusion_crystal>.reuse(), <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+mods.extendedcrafting.TableCrafting.addShaped("ct_imperium", 2, <item:mysticalagriculture:imperium_essence>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:minecraft:air>], 
+	[<item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:infusion_crystal>.anyDamage().transformDamage(), <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+mods.extendedcrafting.TableCrafting.addShaped("ctm_imperium", 2, <item:mysticalagriculture:imperium_essence>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:minecraft:air>], 
+	[<item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:master_infusion_crystal>.reuse(), <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+mods.extendedcrafting.TableCrafting.addShaped("ct_supremium", 3, <item:mysticalagriculture:supremium_essence>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:infusion_crystal>.anyDamage().transformDamage(), <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+mods.extendedcrafting.TableCrafting.addShaped("ctm_supremium", 3, <item:mysticalagriculture:supremium_essence>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:master_infusion_crystal>.reuse(), <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+mods.extendedcrafting.TableCrafting.addShaped("ct_insanium", 4, <item:mysticalagradditions:insanium_essence>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:prudentium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:supremium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:supremium_essence>, <item:mysticalagriculture:infusion_crystal>.anyDamage().transformDamage(), <item:mysticalagriculture:supremium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:prudentium_essence>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:supremium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:prudentium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+mods.extendedcrafting.TableCrafting.addShaped("ctm_insanium", 4, <item:mysticalagradditions:insanium_essence>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:prudentium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:supremium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:supremium_essence>, <item:mysticalagriculture:master_infusion_crystal>.reuse(), <item:mysticalagriculture:supremium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:prudentium_essence>], 
+	[<item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:supremium_essence>, <item:mysticalagriculture:imperium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:tertium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:prudentium_essence>, <item:mysticalagriculture:inferium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mysticalagriculture:prudentium_essence>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
