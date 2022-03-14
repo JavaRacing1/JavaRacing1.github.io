@@ -1,0 +1,80 @@
+#---------------Remove Recipes---------------
+craftingTable.removeRecipe(<item:refinedpipes:basic_item_pipe>);
+craftingTable.removeRecipe(<item:refinedpipes:improved_item_pipe>);
+craftingTable.removeRecipe(<item:refinedpipes:advanced_item_pipe>);
+craftingTable.removeRecipe(<item:refinedpipes:basic_fluid_pipe>);
+craftingTable.removeRecipe(<item:refinedpipes:improved_fluid_pipe>);
+craftingTable.removeRecipe(<item:refinedpipes:advanced_fluid_pipe>);
+craftingTable.removeRecipe(<item:refinedpipes:elite_fluid_pipe>);
+craftingTable.removeRecipe(<item:refinedpipes:ultimate_fluid_pipe>);
+craftingTable.removeRecipe(<item:refinedpipes:basic_extractor_attachment>);
+craftingTable.removeRecipe(<item:refinedpipes:improved_extractor_attachment>);
+craftingTable.removeRecipe(<item:refinedpipes:advanced_extractor_attachment>);
+craftingTable.removeRecipe(<item:refinedpipes:elite_extractor_attachment>);
+craftingTable.removeRecipe(<item:refinedpipes:ultimate_extractor_attachment>);
+
+#---------------Add Recipes for item pipes---------------
+craftingTable.addShaped("ct_ip_iron", <item:refinedpipes:basic_item_pipe>*8, [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>],
+    [<tag:items:forge:ingots/iron>, <tag:items:forge:glass>, <tag:items:forge:ingots/iron>],
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+craftingTable.addShaped("ct_ip_gold", <item:refinedpipes:improved_item_pipe>*8, [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>],
+    [<tag:items:forge:ingots/gold>, <tag:items:forge:glass>, <tag:items:forge:ingots/gold>],
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+craftingTable.addShaped("ct_ip_dia", <item:refinedpipes:advanced_item_pipe>*8, [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>],
+    [<tag:items:forge:gems/diamond>, <tag:items:forge:glass>, <tag:items:forge:gems/diamond>],
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+#---------------Add Recipes for fluid pipes---------------
+craftingTable.addShapeless("ct_fp_iron", <item:refinedpipes:basic_fluid_pipe>, [<item:refinedpipes:basic_item_pipe>, <item:quark:cactus_paste>]);
+craftingTable.addShapeless("ct_fp_gold", <item:refinedpipes:improved_fluid_pipe>, [<item:refinedpipes:improved_item_pipe>, <item:quark:cactus_paste>]);
+craftingTable.addShapeless("ct_fp_dia", <item:refinedpipes:advanced_fluid_pipe>, [<item:refinedpipes:advanced_item_pipe>, <item:quark:cactus_paste>]);
+craftingTable.addShaped("ct_fp_eme", <item:refinedpipes:elite_fluid_pipe>*6, [
+    [<item:quark:cactus_paste>, <item:quark:cactus_paste>, <item:quark:cactus_paste>],
+    [<tag:items:forge:gems/emerald>, <tag:items:forge:glass>, <tag:items:forge:gems/emerald>],
+    [<item:quark:cactus_paste>, <item:quark:cactus_paste>, <item:quark:cactus_paste>]
+]);
+craftingTable.addShaped("ct_fp_net", <item:refinedpipes:ultimate_fluid_pipe>*6, [
+    [<item:quark:cactus_paste>, <item:quark:cactus_paste>, <item:quark:cactus_paste>],
+    [<tag:items:forge:ingots/netherite>, <tag:items:forge:glass>, <tag:items:forge:ingots/netherite>],
+    [<item:quark:cactus_paste>, <item:quark:cactus_paste>, <item:quark:cactus_paste>]
+]);
+
+#---------------Add Recipes for extractors---------------
+
+craftingTable.addShaped("ct_ex_iron", <item:refinedpipes:basic_extractor_attachment>*2, [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>],
+    [<tag:items:forge:ingots/iron>, <item:minecraft:hopper>, <tag:items:forge:ingots/iron>],
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+craftingTable.addShaped("ct_ex_gold", <item:refinedpipes:improved_extractor_attachment>*2, [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>],
+    [<tag:items:forge:ingots/gold>, <item:minecraft:hopper>, <tag:items:forge:ingots/gold>],
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+craftingTable.addShaped("ct_ex_dia", <item:refinedpipes:advanced_extractor_attachment>*2, [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>],
+    [<tag:items:forge:gems/diamond>, <item:minecraft:hopper>, <tag:items:forge:gems/diamond>],
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+craftingTable.addShaped("ct_ex_eme", <item:refinedpipes:elite_extractor_attachment>*2, [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>],
+    [<tag:items:forge:gems/emerald>, <item:minecraft:hopper>, <tag:items:forge:gems/emerald>],
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+
+craftingTable.addShaped("ct_ex_net", <item:refinedpipes:ultimate_extractor_attachment>*2, [
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>],
+    [<tag:items:forge:ingots/netherite>, <item:minecraft:hopper>, <tag:items:forge:ingots/netherite>],
+    [<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
